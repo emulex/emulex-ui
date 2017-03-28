@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="emulexApp">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <!--为了避免angular渲染问题-->
+    <style>
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-controller="AppCtrl">
+
+
+<div class="container-fluid" ng-cloak>
+    <div class="row">
+        <div class="col-md-12 column">
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-2 column">
+
+
+        </div>
+
+        <div class="col-md-10 column">
+            <div ui-view></div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div ui-view></div>
+
+
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script src="./bower_components/angular-route/angular-route.min.js"></script>
+<script src="./bower_components/angular-translate/angular-translate.min.js"></script>
+<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="./bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+<script src="./components/lang/lang.module.js"></script>
+<script src="./components/lang/lang.zh.constant.js"></script>
+<script src="./components/lang/lang.en.constant.js"></script>
+
+<script src="./components/config/config.module.js"></script>
+<script src="./components/config/config.constant.js"></script>
+
+<script src="./components/request/request.module.js"></script>
+<script src="./components/request/request.factory.js"></script>
+
+<script src="./components/main/main.module.js"></script>
+<script src="./components/main/main.factory.js"></script>
+<script src="./components/main/main.config.js"></script>
+<script src="./components/main/main.ctrl.js"></script>
+<script src="./components/main/main.route.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
