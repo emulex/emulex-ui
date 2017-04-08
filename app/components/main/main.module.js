@@ -5,5 +5,8 @@ angular.module('emulexApp', [
     'ui.router',
     'config',
     'pascalprecht.translate',
-    'lang'
+    'task',
+    'search',
+    'lang',
+    'util'
 ]);

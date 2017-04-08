@@ -1,0 +1,40 @@
+
+<div class="row clearfix bk-grey">
+    <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4 column input-group op-list">
+        <input type="text" class="form-control input" maxlength="100" minlength="1" ng-model="d.search.key"
+               placeholder="输入关键字">
+        <span class="input-group-btn">
+            <a id="aaaaaa" class="btn btn-primary" ng-if="d.state==='wait'" ng-click="fn.searchFile(true)">
+                <i class="glyphicon glyphicon-search"></i>{{d.opState[d.state]}}</a>
+            <a id="aaaaaab" class="btn btn-default" ng-if="d.state!=='wait'" ng-click="fn.setWait()"><i
+                    class="glyphicon glyphicon-stop"></i>停止</a>
+        </span>
+    </div>
+</div>
+
+
+<div class="row clearfix" style="border-bottom: none">
+    <table class="table table-striped" style="font-size: 12px;">
+        <thead class="bk-grey">
+        <tr>
+            <th class="right-line">序号</th>
+            <th class="right-line">文件名</th>
+            <th class="right-line">文件大小</th>
+            <th class="right-line">状态</th>
+            <th class="right-line">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in d.tasks">
+            <td>{{$index+1}}</td>
+            <td>{{data.filename}}</td>
+            <td>{{fn.formatFileSize(data.size)}}</td>
+            <td>{{d.fileState[data.status]}}</td>
+            <td><a  class="a-btn" ng-if="data.status==300" ng-click="fn.addTask(data)">下载</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+

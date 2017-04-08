@@ -1,0 +1,114 @@
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    margin: 0;
+    padding: 0;
+}
+
+.op-list.btn-group{
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.op-list.input-group{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.row{
+    border-bottom:1px solid gainsboro;
+}
+
+.row.right{
+    height:100%;
+    border-right:1px solid gainsboro;
+}
+
+.right-line{
+    border-right:1px solid gainsboro;
+    border-bottom:none;
+}
+
+
+html,body{
+    height: 100%;
+    min-width: 800px
+}
+
+.main-body{
+    height: 100%;
+    min-width: 800px
+}
+
+.full-height{
+    height: 100%;
+}
+
+.bk-grey{
+    background-color: #F8F8F8;
+}
+
+
+.infoMsg {
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    max-width: 30%;
+    min-width: 100px;
+    width: 80%;
+    overflow: auto;
+    height: 50px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background-color: #67d372;
+    color: #fff;
+    border-radius: .25rem;
+    font-size: 1.65rem;
+    padding: .3125rem 1.25rem;
+    z-index: 99999;
+    word-break: break-all
+}
+
+
+.errorMsg {
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    max-width: 30%;
+    min-width: 100px;
+    width: 80%;
+    overflow: auto;
+    height: 50px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background-color: #eb8692;
+    color: #fff;
+    border-radius: .25rem;
+    font-size: 1.65rem;
+    padding: .3125rem 1.25rem;
+    z-index: 99999;
+    word-break: break-all
+}
+
+a.a-btn{
+    cursor:pointer;
+    text-decoration: none;
+}

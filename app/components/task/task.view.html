@@ -1,0 +1,40 @@
+<div class="row clearfix bk-grey  ">
+    <div class="btn-group op-list" role="group">
+        <a class="btn btn-default btn-sm" ng-if="fn.isDownloadingState()"><i class="glyphicon glyphicon-pause"></i>全部暂停</a>
+        <a class="btn btn-default btn-sm" ng-if="fn.isDownloadingState()"><i class="glyphicon glyphicon-play"></i>全部开始</a>
+        <a id="delAll" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-trash"></i>全部删除</a>
+    </div>
+</div>
+
+<div class="row clearfix">
+    <h6 ng-if="fn.isDownloadingState()" style="padding-left: 10px">正在下载 (共{{d.downloadingCount}}个)</h6>
+    <h6 ng-if="!fn.isDownloadingState()" style="padding-left: 10px">已完成 (共{{d.doneCount}}个)</h6>
+</div>
+
+<div class="row clearfix" style="border-bottom: none">
+    <table class="table table-striped" style="font-size: 12px;">
+        <thead class="bk-grey">
+        <tr>
+            <th class="right-line">文件名</th>
+            <th class="right-line">大小</th>
+            <th class="right-line">状态</th>
+            <th ng-if="fn.isDownloadingState()" class="right-line">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in d.tasks">
+            <td>{{data.filename}}</td>
+            <td>{{fn.formatFileSize(data.size)}}</td>
+            <td>{{d.fileState[data.status]}}</td>
+            <td ng-if="fn.isDownloadingState()">
+                <a class="a-btn">暂停</a>
+                <a class="a-btn">继续</a>
+            </td>
+            <!--<td><a ng-if="data.status==300" ng-click="fn.addTask(data)">下载</a></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+

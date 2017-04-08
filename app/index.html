@@ -4,43 +4,57 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <!--为了避免angular渲染问题-->
-    <style>
-        [ng-cloak],
-        [data-ng-cloak],
-        [x-ng-cloak],
-        .ng-cloak,
-        .x-ng-cloak {
-            display: none !important;
-        }
-    </style>
+    <link rel="stylesheet" href="./static/css/main.css"/>
+    <link rel="stylesheet" href="./static/css/menu.css"/>
 </head>
-<body ng-controller="AppCtrl">
+<body ng-controller="AppCtrl" class="main-body">
 
 
-<div class="container-fluid" ng-cloak>
-    <div class="row">
-        <div class="col-md-12 column">
+<div class="container-fluid full-height" ng-cloak>
+
+    <div class="row clearfix full-height ">
+        <div class="col-md-2 col-xs-2 column bk-grey" >
+            <div class="row clearfix ">
+                <div class="btn-group op-list" role="group" aria-label="...">
+                    <a class="btn btn-default btn-sm"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                    <a class="btn btn-default btn-sm"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="row clearfix right">
+            <div>
+            <img style="width:65%;padding-left: 25%"
+            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491142070935&di=493d72204733abb5f369d99412812fee&imgtype=0&src=http%3A%2F%2Fstatic5.photo.sina.com.cn%2Forignal%2F538a6058504bd2749daf4">
+            </div>
+            </div>
+
+            <div class="row clearfix right">
+                <div class="btn-group-vertical main-menu" role="group" data-toggle="buttons">
+                    <a type="button" id="id-{{item.state}}"
+                       class="btn btn-default btn-main-menu  bk-grey"
+                       ng-repeat="item in d.menu" ui-sref="{{item.state}}" ui-sref-active="active"
+                       href="javascript:void(0);">
+                        <i class="{{item.icon}}"></i>
+                        {{item.name}}
+                    </a>
+                </div>
+            </div>
+            <div class="row clearfix right ">
+
+            </div>
         </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-md-2 column">
 
 
-        </div>
-
-        <div class="col-md-10 column">
+        <div class="col-md-10 col-xs-10 column ">
             <div ui-view></div>
         </div>
     </div>
 
 
 </div>
-
-
-<div ui-view></div>
 
 
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -60,14 +74,27 @@
 <script src="./components/config/config.module.js"></script>
 <script src="./components/config/config.constant.js"></script>
 
+<script src="./components/util/util.module.js"></script>
+<script src="./components/util/util.factory.js"></script>
+
 <script src="./components/request/request.module.js"></script>
 <script src="./components/request/request.factory.js"></script>
+
+<script src="./components/task/task.module.js"></script>
+<script src="./components/task/task.factory.js"></script>
+<script src="./components/task/task.ctrl.js"></script>
+
+<script src="./components/search/search.module.js"></script>
+<script src="./components/search/search.factory.js"></script>
+<script src="./components/search/search.ctrl.js"></script>
+
 
 <script src="./components/main/main.module.js"></script>
 <script src="./components/main/main.factory.js"></script>
 <script src="./components/main/main.config.js"></script>
 <script src="./components/main/main.ctrl.js"></script>
 <script src="./components/main/main.route.js"></script>
+
 
 </body>
 </html>

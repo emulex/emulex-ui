@@ -1,0 +1,23 @@
+
+.main-menu.btn-group-vertical {
+    width: 100%;
+    background-color: #f6f6f6;
+
+}
+
+.btn.btn-default.btn-main-menu {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.btn.btn-main-menu:focus, .btn.btn-main-menu.focus, .btn.btn-main-menu:active:focus, .btn.btn-main-menu:active.focus, .btn.btn-main-menu.active:focus, .btn.btn-main-menu.active.focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.btn-main-menu:active, .btn.btn-main-menu.active, .btn.btn-main-menu:active:active, .btn.btn-main-menu:active.active, .btn.btn-main-menu.active:active, .btn.btn-main-menu.active.active{
+
+}
