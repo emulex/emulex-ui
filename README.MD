@@ -5,6 +5,7 @@ The ui of the emulex download
 ### Dependences
 *  nodejs
 *  bower
+*  electron
 
 ### Install
 *  bower 
@@ -17,5 +18,12 @@ The ui of the emulex download
     npm install -g electron
 ```
 
+### Config 
+```
+    /app/components/config/config.constant.js
+```
+
 ### Run
-electron .
+```
+    electron app/
+```

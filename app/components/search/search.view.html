@@ -4,8 +4,8 @@
         <input ng-disabled="d.state!=='wait'" type="text" class="form-control input" maxlength="100" minlength="1" ng-model="d.search.key"
                placeholder="输入关键字">
         <span class="input-group-btn">
-            <a class="btn btn-primary" ng-if="d.state==='wait'" ng-click="fn.searchFile(true)">
-                <i class="glyphicon glyphicon-search"></i>{{d.opState[d.state]}}</a>
+            <a id="id-search-file" class="btn btn-primary" ng-if="d.state==='wait'" ng-click="fn.searchFile(true)">
+                <i class="glyphicon glyphicon-search"></i>搜索</a>
             <a  class="btn btn-default" ng-if="d.state!=='wait'" ng-click="fn.setWait()"><i
                     class="glyphicon glyphicon-stop"></i>停止</a>
         </span>
