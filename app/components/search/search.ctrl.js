@@ -69,25 +69,27 @@ angular.module('search')
 
                 console.log(window);
                 $scope.fn.addTask = function (file) {
-                    var params = {
-                        hash: file.emd4,
-                        filename: file.filename,
-                        location: "/Users/user/svn",
-                        size: file.size
-                    };
-                    taskSrv.addTask(params).then(
-                        function (resp) {
-                            if (resp.code !== 0) {
-                                $().ErrorMsg(resp.msg || '出错了~(≧ ﹏ ≦)');
-                                return;
+                    utilSrv.selectDir({}, function (location) {
+                        var params = {
+                            hash: file.emd4,
+                            filename: file.filename,
+                            location: location[0],
+                            size: file.size
+                        };
+                        taskSrv.addTask(params).then(
+                            function (resp) {
+                                if (resp.code !== 0) {
+                                    $().ErrorMsg(resp.msg || '出错了~(≧ ﹏ ≦)');
+                                    return;
+                                }
+                                $scope.fn.searchFile(false);
+                            },
+                            function (error) {
+                                console.log(error);
+                                $().ErrorMsg('系统崩了!? (≧ ﹏ ≦)');
                             }
-                            $scope.fn.searchFile(false);
-                        },
-                        function (error) {
-                            console.log(error);
-                            $().ErrorMsg('系统崩了!? (≧ ﹏ ≦)');
-                        }
-                    );
+                        );
+                    });
                 };
 
                 $scope.$on("file_found", function (event, data) {

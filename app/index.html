@@ -2,13 +2,22 @@
 <html ng-app="emulexApp">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>eMuleX</title>
     <meta name="description" content="">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./static/css/main.css"/>
     <link rel="stylesheet" href="./static/css/menu.css"/>
+
+    <script>
+        window.nodeRequire = require;
+
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
+
 </head>
 <body ng-controller="AppCtrl" class="main-body">
 
@@ -60,7 +69,6 @@
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./bower_components/angular/angular.min.js"></script>
 <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 
 <script src="./bower_components/angular-route/angular-route.min.js"></script>
 <script src="./bower_components/angular-translate/angular-translate.min.js"></script>

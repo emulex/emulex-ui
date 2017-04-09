@@ -12,3 +12,10 @@ The ui of the emulex download
     npm install bower -g
     bower install
 ```
+*  electron
+```
+    npm install -g electron
+```
+
+### Run
+electron .
