@@ -36,7 +36,8 @@ angular.module('emulexApp').controller('AppCtrl', ['$scope', 'apiConfig', '$stat
     $scope.d.menu = [
         {name: "正在下载", state: "taskDownloading", icon: "glyphicon glyphicon-download-alt"},
         {name: "已完成", state: "taskDone", icon: "glyphicon glyphicon-ok"},
-        {name: "搜索资源", state: "search", icon: "glyphicon glyphicon-search"}
+        {name: "搜索资源", state: "search", icon: "glyphicon glyphicon-search"},
+        {name: "分享资源", state: "share", icon: "glyphicon glyphicon-share"}
     ];
 
     $scope.fn.connect = function () {

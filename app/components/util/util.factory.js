@@ -16,7 +16,7 @@ angular
 
                 } else {
                     const ipc = nodeRequire('electron').ipcRenderer;
-                    ipc.send('select-dir');
+                    ipc.send('select-dir', params);
                     ipc.on("select-dir-reply", function (event, args) {
                         cb(args)
                     });
@@ -27,7 +27,7 @@ angular
 
                 } else {
                     const ipc = nodeRequire('electron').ipcRenderer;
-                    ipc.send('select-file');
+                    ipc.send('select-file', params);
                     ipc.on("select-file-reply", function (event, args) {
                         cb(args)
                     });

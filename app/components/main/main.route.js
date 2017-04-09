@@ -14,6 +14,10 @@ angular.module('emulexApp')
                 url: "/done",
                 template: "<task></task>"
             })
+            .state("share", {
+                url: "/share",
+                template: "<share></share>"
+            })
             .state("search", {
                 url: "/search",
                 template: "<search></search>"

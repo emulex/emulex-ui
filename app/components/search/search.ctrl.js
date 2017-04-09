@@ -67,7 +67,6 @@ angular.module('search')
                     );
                 };
 
-                console.log(window);
                 $scope.fn.addTask = function (file) {
                     utilSrv.selectDir({}, function (location) {
                         var params = {

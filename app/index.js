@@ -26,7 +26,12 @@ function createWindow() {
     });
 
     ipc.on('select-file', (event, args) => {
-        event.sender.send('select-file-reply', dialog.showOpenDialog({properties: ['openFile']}));
+        console.log(args);
+        var filters = [];
+        // if(args.ignore!=undefined && args.ignore.files !=undefined){
+        //     filters = args.ignore.files;
+        // }
+        event.sender.send('select-file-reply', dialog.showOpenDialog({properties: ['openFile'],filters:filters}));
     });
 
     // 当窗口关闭时调用的方法

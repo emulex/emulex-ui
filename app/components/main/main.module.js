@@ -8,5 +8,6 @@ angular.module('emulexApp', [
     'task',
     'search',
     'lang',
-    'util'
+    'util',
+    'share'
 ]);
