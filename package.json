@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "GNU",
-  "devDependencies": {
-    "electron": "^1.6.2"
-  }
+  "license": "GNU"
 }
